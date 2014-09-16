@@ -3,7 +3,7 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-image: url(images/wallpaper.jpg);
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -21,15 +21,36 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+  border-radius:0px;
   position:absolute;
+  -webkit-animation-name: rotate;
+  -webkit-animation-duration:2s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:linear;
+}
+
+.dancer:hover{
+-webkit-animation-name: rotate;
+  -webkit-animation-duration:.3s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:linear;
+}
+
+@-webkit-keyframes rotate {
+  from {-webkit-transform:rotate(0deg);}
+  to {  -webkit-transform:rotate(360deg);}
 }
 
 .blinkyDancer{
-
+  background-image: url(images/pikachu.png);
+  height: 300px;
+  width: 300px;
+  background-size: 100%;
 }
 
 .movingDancer{
-
+  background-image: url(images/charmander.png);
+  height: 340px;
+  width: 300px;
+  background-size: 100%;
 }

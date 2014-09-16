@@ -1,5 +1,14 @@
 $(document).ready(function(){
   window.dancers = [];
+  $('.lineUp').on('click',function(event){
+    $('.blinkyDancer').css({'left': '10px'});
+    $('.movingDancer').css({'left': '10px'})
+    // for (var i = 0; i < dancers.length; i++) {
+    //   dancers[i].lineUp();
+    // }
+  });
+
+
 
   $(".addDancerButton").on("click", function(event){
     /* This function sets up the click handlers for the create-dancer
@@ -23,9 +32,9 @@ $(document).ready(function(){
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
+      $("body").height() * Math.random() + 10,
       $("body").width() * Math.random(),
-      Math.random() * 1000
+      Math.random() * 3000
     );
     $('body').append(dancer.$node);
   });
