@@ -3,7 +3,7 @@ body, html{
 }
 body{
   margin: 0px;
-  background-image: url(images/wallpaper.jpg);
+  background-image: url(images/wallpaper.png);
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -21,17 +21,12 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border-radius:0px;
   position:absolute;
-  -webkit-animation-name: rotate;
-  -webkit-animation-duration:2s;
-  -webkit-animation-iteration-count:infinite;
-  -webkit-animation-timing-function:linear;
 }
 
-.dancer:hover{
--webkit-animation-name: rotate;
-  -webkit-animation-duration:.3s;
+.dancerRotate{
+  -webkit-animation-name: rotate;
+  -webkit-animation-duration:1s;
   -webkit-animation-iteration-count:infinite;
   -webkit-animation-timing-function:linear;
 }
@@ -42,6 +37,8 @@ body, a:link, a:visited, a:active{
 }
 
 .blinkyDancer{
+  border-radius:0px;
+  position:absolute;
   background-image: url(images/pikachu.png);
   height: 300px;
   width: 300px;
@@ -53,4 +50,33 @@ body, a:link, a:visited, a:active{
   height: 340px;
   width: 300px;
   background-size: 100%;
+}
+
+.Pokeball{
+  height: 150px;
+  width: 150px;
+  background-size: 100%;
+  position:absolute;
+  background-image: url(images/pokeball.png);
+  -webkit-transition: background-image 1.5s ease-in-out;
+}
+
+.transformCharzard{
+  height: 430px;
+  width: 400px;
+  background-size: 100%;
+  background-image: url(images/charzard.png);
+   -webkit-transition: background-image 1.5s ease-in-out;
+}
+
+.transformPikachu{
+  height: 420px;
+  width: 300px;
+  background-size: 100%;
+  background-image: url(images/raichu.png);
+   -webkit-transition: background-image 0.5s ease-in-out;
+}
+
+.lineUp{
+
 }

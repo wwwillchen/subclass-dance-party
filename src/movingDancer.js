@@ -6,7 +6,7 @@ var makeMovingDancer = function(top, left, timeBetweenSteps){
 makeMovingDancer.prototype = Object.create(makeDancer.prototype);
 makeMovingDancer.prototype.constructor = makeMovingDancer;
 makeMovingDancer.prototype.step = function(){  // call the old version of step at the beginning of any call to this new version of step
-  var x = this.step.bind(this);
-  setTimeout(function() {x()}, this.time);
+  var bindDancer = makeDancer.prototype.step.bind(this);
+  bindDancer();
   this.$node.toggle();
 };
